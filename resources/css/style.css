@@ -45,6 +45,7 @@ header {
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  z-index:1;
 }
 
 header .content {
@@ -81,40 +82,36 @@ header .mobile {
   display: none;
 }
 
-/*added code*/
-@media only screen (min-width: 761px) and (max-width: 1024px) {
-  header .desktop .button {
-    display: none;
-  }
+header .tablet {
+  display: none;
 }
-/*end added code*/
 
-@media only screen and (max-width: 450px) { /*changed 760 to 450*/
-  header .desktop {
+@media only screen and (max-width: 760px) {
+  nav.desktop {
     display: none;
   }
 
-  header .mobile {
+  nav.mobile {
     display: block;
     width: 100%;
   }
 
-  header .content {
+  header.content {
     padding: .5rem 0;
   }
 
-  header .mobile ul {
+  header.mobile ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
   }
 
-  header .mobile li {
+  header.mobile li {
     padding: 0;
   }
 
-  header .mobile .button {
+  header.mobile .button {
     padding: .1875rem .5rem;
     background-color: #9dc20b;
     line-height: 1.6;
